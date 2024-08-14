@@ -10,17 +10,17 @@ const Navbar = () => {
             
     </>
     return (
-        <div className=' mt-3 flex justify-between'>
+        <div className=' horizontal  mt-3 flex justify-between'>
             <div>
-                 <h1>Real Estate</h1>
+                 <h1 className='text-3xl'>Real Estate</h1>
             </div>
-            <div className='flex gap-3 list-none'>
+            <div className='flex gap-3 mt-2 list-none'>
               {
                 Links
               }
             </div>
             <div>
-                <button className='btn btn-primary'>LogIn</button>
+                 <NavLink to="/login"><button  className='btn btn-primary'>LogIn</button></NavLink>
             </div>
         </div>
     );
