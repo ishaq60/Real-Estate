@@ -52,6 +52,7 @@
         "price": "$500 per night",
         "status": "rent",
         "area": "1500 sqft",
+        
         "location": "8th Floor, Business District",
         "facilities": ["Living room", "Swimming pool", "Kitchen", "Work Desk", "High-Speed Internet"],
         "image": "https://i.ibb.co/3N4XCsn/executive-office.jpg",
