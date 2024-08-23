@@ -5,7 +5,7 @@ import Footer from '../Pages/Footer';
 
 const Root = () => {
     return (
-        <div>
+        <div className='w-full'>
             <Navbar/>
             <Outlet></Outlet>
             <Footer/>

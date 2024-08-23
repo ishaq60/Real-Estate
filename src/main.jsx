@@ -11,10 +11,13 @@ import Home from './Pages/Home.jsx';
 import LogIn from './Pages/LogIn.jsx';
 import Register from './Pages/Register.jsx';
 import FirebaseAuthProvider from './FirebaseProvder/FirebaseAuthProvider.jsx';
+import ErrorPages from './Pages/ErrorPages.jsx';
+import CardDetails from './Pages/Cards/CardDetails.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:<ErrorPages></ErrorPages>,
     element: <Root/>,
     children:[
       {
@@ -28,6 +31,11 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register/>
+      },
+      {
+        path:'/card/:id',
+        element:<CardDetails/>,
+        loader:()=>fetch('data.json')
       }
     ]
   },

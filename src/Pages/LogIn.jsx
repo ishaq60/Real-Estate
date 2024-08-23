@@ -1,21 +1,69 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import UseAuth from '../Component/UseAuth';
 
-    const LogIn = () => {
-       const {GoogleLogIn,GithubLogIn}=UseAuth()
-       console.log(GithubLogIn);
- 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+const LogIn = () => {
+    const { GoogleLogIn, GithubLogIn, LogInuser } = UseAuth();
+    const navigate = useNavigate();
+    const [error, setError] = useState("");
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+
+    const onSubmit = (data) => {
+        const { email, password } = data;
+        setError(""); // Reset error before login attempt
+
+        LogInuser(email, password)
+            .then(result => {
+                console.log('User logged in successfully:', result.user);
+                navigate("/"); // Redirect to homepage or desired route after successful login
+            })
+            .catch(error => {
+                console.error('Error logging in:', error);
+                switch (error.code) {
+                    case 'auth/password':
+                        setError("Incorrect password. Please try again.");
+                        break;
+                    case 'auth/email':
+                        setError("No user found with this email.");
+                        break;
+                    case 'auth/invalid-credential':
+                        setError("Invalid  your email or password.");
+                        break;
+                    default:
+                        setError(`Login failed: ${error.message}`);
+                }
+            });
+    };
+
+    const handleGoogleLogin = () => {
+        GoogleLogIn()
+            .then(result => {
+                console.log('Logged in with Google:', result.user);
+                navigate("/"); // Redirect after successful Google login
+            })
+            .catch(error => {
+                console.error('Google login error:', error);
+                setError(`Google login failed: ${error.message}`);
+            });
+    };
+
+    const handleGithubLogin = () => {
+        GithubLogIn()
+            .then(result => {
+                console.log('Logged in with GitHub:', result.user);
+                navigate("/"); // Redirect after successful GitHub login
+            })
+            .catch(error => {
+                console.error('GitHub login error:', error);
+                setError(`GitHub login failed: ${error.message}`);
+            });
+    };
 
 
   return (
@@ -27,12 +75,13 @@ import UseAuth from '../Component/UseAuth';
             <label htmlFor="username" className="block dark:text-gray-600">Email</label>
             <input
               type="email"
-              {...register("username", { required: true })}
+              {...register("email", { required: true })}
               id="username"
-              placeholder="Username"
+              name='email'
+              placeholder="Email"
               className="w-full px-4 py-3 rounded-md border border-gray-700 focus:border-violet-400 dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
             />
-            {errors.username && <span className="text-red-500 text-xs">Email is required</span>}
+            {errors.email && <span className="text-red-500 text-xs">Email is required</span>}
           </div>
          
           <div className="space-y-1 text-sm">
@@ -42,6 +91,7 @@ import UseAuth from '../Component/UseAuth';
               {...register("password", { required: true })}
               id="password"
               placeholder="Password"
+              name='password'
               className="w-full px-4 py-3 rounded-md border border-gray-700 dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:border-violet-400"
             />
             {errors.password && <span className="text-red-500 text-xs">Password is required</span>}
@@ -53,6 +103,9 @@ import UseAuth from '../Component/UseAuth';
             Sign in
           </button>
         </form>
+        {
+          error && <p className='text-red-600'>{error}</p>
+        }
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px sm:w-16 bg-gray-700 dark:bg-gray-300"></div>
           <p className="px-3 text-sm text-gray-400 dark:text-gray-600">Login with social accounts</p>

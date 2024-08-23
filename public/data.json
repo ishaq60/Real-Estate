@@ -1,0 +1,127 @@
+ [
+      {
+        "id": "DLH-106",
+        "estate_title": "Standard Room",
+        "segment_name": "Standard",
+        "description": "A cozy room perfect for solo travelers, equipped with all the basic amenities and a comfortable bed.",
+        "price": "$250 per night",
+        "status": "rent",
+        "area": "800 sqft",
+        "location": "3rd Floor, City View",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Free Wi-Fi"],
+        "image": ["https://i.ibb.co/dJYcDsL/small-hotel-room-interior-with-double-bed-bathroom.jpg",
+        "https://i.ibb.co/p10SWTt/standard.jpg"
+      ]
+     ,
+        "viewProperty": "ViewProperty106"
+      },
+      {
+        "id": "DLH-107",
+        "estate_title": "Superior Room",
+        "segment_name": "Superior",
+        "description": "An upgraded room offering a queen-size bed, modern decor, and a beautiful garden view.",
+        "price": "$350 per night",
+        "status": "rent",
+        "area": "1000 sqft",
+        "location": "4th Floor, Garden View",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Garden View"],
+        "image": [   "https://i.ibb.co/Y3dYHjP/superior.jpg",
+      " https://i.ibb.co/xG3C8RL/pexels-pixabay-271624.jpg"
+      ],      
+       
+        "viewProperty": "ViewProperty107"
+      },
+      {
+        "id": "DLH-108",
+        "estate_title": "Deluxe Room",
+        "segment_name": "Deluxe",
+        "description": "A spacious room with elegant furnishings, a king-size bed, and a balcony overlooking the city.",
+        "price": "$450 per night",
+        "status": "rent",
+        "area": "1200 sqft",
+        "location": "6th Floor, City View",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Balcony"],
+        "image":[ "https://i.ibb.co/rFGRDgd/Deluxe-Room.jpg","https://i.ibb.co/tYMWsjG/alexandra-gorn-JIUjvqe2-ZHg-unsplash.jpg"],
+        "viewProperty": "ViewProperty108"
+      },
+      {
+        "id": "DLH-103",
+        "estate_title": "Executive Room",
+        "segment_name": "Business",
+        "description": "A stylish room designed for business travelers, equipped with a work desk, high-speed internet, and a stunning city view.",
+        "price": "$500 per night",
+        "status": "rent",
+        "area": "1500 sqft",
+        "location": "8th Floor, Business District",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Work Desk", "High-Speed Internet"],
+        "image": "https://i.ibb.co/3N4XCsn/executive-office.jpg",
+        "viewProperty": "ViewProperty103"
+      },
+      {
+        "id": "DLH-104",
+        "estate_title": "Family Suite",
+        "segment_name": "Family",
+        "description": "A spacious suite ideal for families, featuring two bedrooms, a living area, and a playroom for children.",
+        "price": "$700 per night",
+        "status": "rent",
+        "area": "2000 sqft",
+        "location": "5th Floor, Family Wing",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Playroom", "Dining Area"],
+        "image": "https://i.ibb.co/5kGTncv/family.jpg",
+        "viewProperty": "ViewProperty104"
+      },
+      {
+        "id": "DLH-102",
+        "estate_title": "Royal Suite",
+        "segment_name": "Luxury",
+        "description": "Experience royalty in our Royal Suite, featuring antique furnishings, a grand bedroom, and a jacuzzi.",
+        "price": "$950 per night",
+        "status": "rent",
+        "area": "2200 sqft",
+        "location": "10th Floor, Ocean View",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Jacuzzi", "Private Bar"],
+        "image": "https://i.ibb.co/0p0gxm9/royal.jpg",
+        "viewProperty": "ViewProperty102"
+      },
+      {
+        "id": "DLH-101",
+        "estate_title": "Presidential Suite",
+        "segment_name": "Luxury",
+        "description": "A lavishly furnished suite offering panoramic city views, a private balcony, and exclusive amenities.",
+        "price": "$1,200 per night",
+        "status": "rent",
+        "area": "2500 sqft",
+        "location": "15th Floor, City Center",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Private Balcony", "Butler Service"],
+        "image": "https://i.ibb.co/YP5vxnw/presidentail.jpg",
+        "viewProperty": "ViewProperty101"
+      },
+      {
+        "id": "DLH-109",
+        "estate_title": "Skyline Suite",
+        "segment_name": "Exclusive",
+        "description": "A suite offering floor-to-ceiling windows with breathtaking skyline views, a private lounge, and luxury amenities.",
+        "price": "$1,800 per night",
+        "status": "rent",
+        "area": "2700 sqft",
+        "location": "Top Floor, Skyline View",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Private Lounge", "Skyline View"],
+        "image": "https://i.ibb.co/xh0X0fR/sky.jpg",
+        "viewProperty": "ViewProperty109"
+      },
+      {
+        "id": "DLH-105",
+        "estate_title": "Penthouse Suite",
+        "segment_name": "Exclusive",
+        "description": "An exclusive penthouse suite offering breathtaking views, a private rooftop pool, and a personal chef on request.",
+        "price": "$2,500 per night",
+        "status": "rent",
+        "area": "3000 sqft",
+        "location": "Top Floor, Skyline View",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Private Rooftop Pool", "Personal Chef"],
+        "image": "https://i.ibb.co/WD3S0Nc/penthouse.jpg",
+        "viewProperty": "ViewProperty105"
+      }
+    ]
+  
+  
