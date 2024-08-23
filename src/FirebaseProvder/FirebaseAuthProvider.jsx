@@ -6,42 +6,38 @@ import auth from '../FirebaseAuth/Firebase.config';
   const GithubProvider=new GithubAuthProvider()
 const FirebaseAuthProvider = ({children}) => {
   const [user,setUser]=useState()
+  const [loading,setloading]=useState(true)
+  console.log(loading);
   console.log(user);
 
+// 
 
   // Registration
   const CreateUser=(email,password)=>{
+    setloading(true)
    return createUserWithEmailAndPassword(auth,email,password)
   }
   //LogIN
   const LogInuser=(email,password)=>{
+    setloading(true)
    return signInWithEmailAndPassword(auth,email,password)
 
   }
     const GoogleLogIn=()=>{
-        signInWithPopup(auth,GoogleProvider)
-        .then((result) => {
-            console.log("User signed in:", result.user);
-            // Additional logic after successful sign-in can be added here
-          })
-          .catch((error) => {
-            console.error("Error during Google login:", error.message);
-            // Optionally handle different error codes
-          });
+      setloading(true)
+     return   signInWithPopup(auth,GoogleProvider)
+        
     }
 
     // 
     const GithubLogIn=()=>{
-        signInWithPopup(auth,GithubProvider)
-        .then((result)=>{
-            console.log(result);
-        })
-        .catch((error)=>{
-       console.log("eee");
-        })
+      setloading(true)
+       return signInWithPopup(auth,GithubProvider)
+      
     }
     // Logout
     const Logout=()=>{
+      
       setUser(null)
      signOut(auth)
      .then(()=>{
@@ -54,17 +50,19 @@ const FirebaseAuthProvider = ({children}) => {
   
     //
     useEffect(()=>{
-      onAuthStateChanged(auth ,(user)=>{
+    const unsuscribe=  onAuthStateChanged(auth ,(user)=>{
         if(user){
           setUser(user)
+          setloading(false)
         }
       })
+      return ()=>unsuscribe()
     },[])
     const allvalue={
     GoogleLogIn,
     GithubLogIn,
     Logout,
-    user,CreateUser,LogInuser
+    user,CreateUser,LogInuser,loading
     }
     return (
        <AuthContext.Provider value={allvalue}>

@@ -13,6 +13,7 @@ import Register from './Pages/Register.jsx';
 import FirebaseAuthProvider from './FirebaseProvder/FirebaseAuthProvider.jsx';
 import ErrorPages from './Pages/ErrorPages.jsx';
 import CardDetails from './Pages/Cards/CardDetails.jsx';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/card/:id',
-        element:<CardDetails/>,
+        element:<PrivateRoute><CardDetails/></PrivateRoute>,
         loader:()=>fetch('data.json')
       }
     ]

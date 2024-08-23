@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from '../FirebaseAuth/Firebase.config';
@@ -9,12 +9,16 @@ import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
+    const location = useLocation();
+    const navigate=useNavigate()
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-    
+    const from = location?.state || '/';
+   
+   
     const CreateUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };
@@ -47,6 +51,7 @@ const Register = () => {
                 console.log(result.user);
                 setSuccess("User created successfully");
                 toast.success("User created successfully");
+                navigate(from)
             })
             .catch(error => {
                 console.error(error);
