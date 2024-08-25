@@ -55,7 +55,7 @@
         
         "location": "8th Floor, Business District",
         "facilities": ["Living room", "Swimming pool", "Kitchen", "Work Desk", "High-Speed Internet"],
-        "image": "https://i.ibb.co/3N4XCsn/executive-office.jpg",
+        "image": ["https://i.ibb.co/3N4XCsn/executive-office.jpg","https://i.ibb.co/wNBVzjS/room-used-official-event.jpg"],
         "viewProperty": "ViewProperty103"
       },
       {
@@ -68,7 +68,7 @@
         "area": "2000 sqft",
         "location": "5th Floor, Family Wing",
         "facilities": ["Living room", "Swimming pool", "Kitchen", "Playroom", "Dining Area"],
-        "image": "https://i.ibb.co/5kGTncv/family.jpg",
+        "image":["https://i.ibb.co/5kGTncv/family.jpg","https://i.ibb.co/99bj2b4/family.jpg"],
         "viewProperty": "ViewProperty104"
       },
       {
@@ -81,7 +81,7 @@
         "area": "2200 sqft",
         "location": "10th Floor, Ocean View",
         "facilities": ["Living room", "Swimming pool", "Kitchen", "Jacuzzi", "Private Bar"],
-        "image": "https://i.ibb.co/0p0gxm9/royal.jpg",
+        "image": ["https://i.ibb.co/0p0gxm9/royal.jpg","https://i.ibb.co/cCW16nb/Royal.jpg"],
         "viewProperty": "ViewProperty102"
       },
       {
@@ -94,7 +94,7 @@
         "area": "2500 sqft",
         "location": "15th Floor, City Center",
         "facilities": ["Living room", "Swimming pool", "Kitchen", "Private Balcony", "Butler Service"],
-        "image": "https://i.ibb.co/YP5vxnw/presidentail.jpg",
+        "image": ["https://i.ibb.co/YP5vxnw/presidentail.jpg","https://i.ibb.co/PhM8B7t/president.jpg"],
         "viewProperty": "ViewProperty101"
       },
       {
@@ -107,7 +107,7 @@
         "area": "2700 sqft",
         "location": "Top Floor, Skyline View",
         "facilities": ["Living room", "Swimming pool", "Kitchen", "Private Lounge", "Skyline View"],
-        "image": "https://i.ibb.co/xh0X0fR/sky.jpg",
+        "image": ["https://i.ibb.co/xh0X0fR/sky.jpg","https://i.ibb.co/m5wkHm0/s.jpg"],
         "viewProperty": "ViewProperty109"
       },
       {
@@ -120,7 +120,7 @@
         "area": "3000 sqft",
         "location": "Top Floor, Skyline View",
         "facilities": ["Living room", "Swimming pool", "Kitchen", "Private Rooftop Pool", "Personal Chef"],
-        "image": "https://i.ibb.co/WD3S0Nc/penthouse.jpg",
+        "image": ["https://i.ibb.co/WD3S0Nc/penthouse.jpg","https://i.ibb.co/dfbThJ8/bedroom-with-green-wall-bed-with-plant-it.jpg"],
         "viewProperty": "ViewProperty105"
       }
     ]
