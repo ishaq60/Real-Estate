@@ -29,7 +29,7 @@ const Body = () => {
         // data-aos="fade-up"
       >
         {/* Video Section */}
-        <div className="w-[600px] sm:w-1/3 h-[400px] mt-5 p-4 mb-10 md:mb-0" data-aos="fade-right"> 
+        <div className=" md:w-[600px] sm:w-[300px] h-[400px] mt-5 p-4 mb-10 md:mb-0" data-aos="fade-right"> 
           <video className="w-full h-full rounded-lg" controls>
             <source src="images/vi.mp4" type="video/mp4" />
             <source src="path/to/your/video.ogg" type="video/ogg" />

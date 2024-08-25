@@ -110,8 +110,9 @@ const Navbar = () => {
                 >
                   <div className="w-8 sm:w-10 rounded-full">
                     <img
-                      alt="User Avatar"
+                     
                       src={user.photoURL}
+                
                     />
                   </div>
                   {isHovered && (

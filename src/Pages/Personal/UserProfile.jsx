@@ -7,8 +7,8 @@ const UserProfile = () => {
   console.log(user);
   const { photoURL, email, displayName } = user;
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="max-w-md p-8 w-[700px] dark:bg-gray-50 dark:text-gray-800">
+    <div className="flex items-center rounded-xl justify-center  h-screen bg-gradient-to-r from-[#A8D26D] to-[#007F5F]  ">
+      <div className="max-w-md p-8 w-[700px] rounded-xl bg-white  dark:bg-gray-50 dark:text-gray-800">
         <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
           <img
             src={photoURL}

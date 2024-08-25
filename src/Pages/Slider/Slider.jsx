@@ -6,7 +6,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 const Slider = () => {
     return (
-        <div className='mb-2 ] h-[700px]'>
+        <div className='mb-2 md:w-full sm:w-1/3 h-[700px]'>
             <Swiper className='absolate'
                  modules={[Navigation, Pagination, Scrollbar, A11y]}
                  spaceBetween={50}
@@ -15,8 +15,8 @@ const Slider = () => {
                  pagination={{ clickable: true }}
                  scrollbar={{ draggable: true }}
             >
-                <SwiperSlide className='mb-2'>
-                    <img className='h-[600px]'  src="images/1.jpg" alt="Image 1" style={{width:"100%"}} />
+                <SwiperSlide className='mb-2  md:w-full sm:w-1/3  '>
+                    <img className='h-[600px]'   src="images/1.jpg" alt="Image 1" style={{width:"100%"}} />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img className='h-[600px]' src="images/2.jpg" alt="Image 1" style={{width:"100%"}} />
