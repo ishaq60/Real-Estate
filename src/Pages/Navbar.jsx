@@ -57,6 +57,19 @@ const Navbar = () => {
           User Profile
         </NavLink>
       </li>
+      <li className="rounded-md px-3 py-2 text-sm font-medium">
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-900  p-2 rounded-xl text-white"
+              : "text-gray-700"
+          }
+          aria-current="page"
+        >
+         Contact Us
+        </NavLink>
+      </li>
     </>
   );
 
@@ -121,6 +134,8 @@ const Navbar = () => {
                     >
                       User Profile
                     </NavLink>
+                 
+
                     <button
                       onClick={() => {
                         Logout();

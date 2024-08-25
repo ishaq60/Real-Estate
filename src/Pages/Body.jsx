@@ -76,7 +76,7 @@ const Body = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.9 }}
-        className="bg-gray-100 h-[1900px] mt-10"
+        className="bg-gray-100  h-auto  mt-10"
       >
         <h1 className="text-5xl text-center text-[#987038]">Our Rooms</h1>
         <div className="sm:grid-cols-1 w-fit md:grid-cols-3 lg:grid grid-cols-3 gap-4" data-aos="fade-up"

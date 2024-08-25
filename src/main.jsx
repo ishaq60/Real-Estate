@@ -16,6 +16,7 @@ import CardDetails from './Pages/Cards/CardDetails.jsx';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute.jsx';
 import UpdateProfile from './Pages/Personal/UpdateProfile.jsx';
 import UserProfile from './Pages/Personal/UserProfile.jsx';
+import ContactUs from './Pages/Slider/ContactUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
          path: "/userprofile",
          element: <PrivateRoute> <UserProfile/> </PrivateRoute>
+      },
+      {
+         path: "/contact",
+         element: <PrivateRoute> <ContactUs/> </PrivateRoute>
       },
       {
         path:'/card/:id',
