@@ -5,10 +5,12 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from '../FirebaseAuth/Firebase.config';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { FaEyeSlash } from "react-icons/fa6";
+import { FaEye } from "react-icons/fa";
 const Register = () => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
+    const [showpassword,setshowpassword]=useState(false)
     const location = useLocation();
     const navigate=useNavigate()
     const {
@@ -91,14 +93,23 @@ const Register = () => {
                     </div>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                        <input
-                            type="password"
+                        <input 
+                            type={showpassword ? "text":  "password"} 
                             {...register("password", { required: true })}
                             id="password"
                             placeholder="Password"
                             name='password'
-                            className="w-full px-4 py-3 rounded-md border border-gray-700 dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:border-violet-400"
+                            className="w-full px-4 py-3 rounded-md border relative border-gray-700 dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:border-violet-400"
+                            
                         />
+                        <span className='absolute py-4 -ml-5' onClick={()=>setshowpassword(!showpassword)}>
+
+                            {
+                                showpassword? <FaEyeSlash/>: <FaEye/>
+                            }
+                        </span>
+
+                        
                         {errors.password && <span className="text-red-700 text-xs">Password is required</span>}
                     </div>
                     <button

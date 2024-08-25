@@ -14,6 +14,8 @@ import FirebaseAuthProvider from './FirebaseProvder/FirebaseAuthProvider.jsx';
 import ErrorPages from './Pages/ErrorPages.jsx';
 import CardDetails from './Pages/Cards/CardDetails.jsx';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute.jsx';
+import UpdateProfile from './Pages/Personal/UpdateProfile.jsx';
+import UserProfile from './Pages/Personal/UserProfile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register/>
+      },
+      {
+          path:"/userUpdate",
+          element: <PrivateRoute> <UpdateProfile/> </PrivateRoute>
+      },
+      {
+         path: "/userprofile",
+         element: <PrivateRoute> <UserProfile/> </PrivateRoute>
       },
       {
         path:'/card/:id',

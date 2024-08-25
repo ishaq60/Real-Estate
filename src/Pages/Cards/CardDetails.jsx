@@ -23,7 +23,7 @@ const CardDetails = () => {
             <div className="container mx-auto flex flex-col  lg:flex-row">
                 <div className="lg:w-1/2 xl:w-3/5 dark:bg-gray-100">
                     <div className="flex items-center justify-center  p-4 md:p-8 lg:p-12">
-                        <div className="h-[700px] w-full">
+                        <div className="h-[700px] w-full"  data-aos="fade-left" >
                             <Swiper
                                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                                 spaceBetween={50}
@@ -31,6 +31,7 @@ const CardDetails = () => {
                                 navigation
                                 pagination={{ clickable: true }}
                                 scrollbar={{ draggable: true }}
+                                data-aos="fade-left"
                             >
                                 {Array.isArray(image) ? image.map((img, index) => (
                                     <SwiperSlide key={index}>
@@ -54,7 +55,10 @@ const CardDetails = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col px-6 py-8 space-y-6 shadow-xl sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 justify-center rounded-lg mt-[100px] bg-violet-400 h-[500px] dark:bg-violet-600 text-gray-900 dark:text-gray-50">
+                <div className="flex flex-col px-6 py-8 space-y-6 shadow-xl sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 justify-center
+                 rounded-lg mt-[100px] bg-violet-400 h-[500px] dark:bg-violet-600 text-gray-900 dark:text-gray-50"data-aos="fade-up" 
+                 data-aos-easing="ease-out-cubic"
+                 data-aos-duration="2000">
                     <h2 className="text-2xl font-bold">{estate_title}</h2>
                     <p className="text-lg">{description}</p>
                     <p className="text-lg font-medium">{price}</p>
@@ -79,7 +83,7 @@ const CardDetails = () => {
                 
             </div>
             <div className='text-center mb-10'>
-            <Link to="/"> <button className='btn-primary btn justify-center '>Go to Home</button></Link>
+            <Link to="/"> <button className='btn-primary btn justify-center mt-2 '>Go to Home</button></Link>
             </div>
         </section>
     );

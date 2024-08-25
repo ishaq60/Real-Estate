@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from '../FirebaseAuth/Firebase.config';
   export const AuthContext=createContext(null)
   const GoogleProvider=new GoogleAuthProvider();
@@ -47,7 +47,14 @@ const FirebaseAuthProvider = ({children}) => {
       console.log("error");
      })
     }
-  
+  // 
+  const updateCreateUser = (userName, photoUrl) => {
+    setloading(true);
+    return updateProfile(auth.currentUser, {
+      displayName: userName,
+      photoURL: photoUrl,
+    });
+  };
     //
     useEffect(()=>{
     const unsuscribe=  onAuthStateChanged(auth ,(user)=>{
@@ -62,7 +69,7 @@ const FirebaseAuthProvider = ({children}) => {
     GoogleLogIn,
     GithubLogIn,
     Logout,
-    user,CreateUser,LogInuser,loading
+    user,CreateUser,LogInuser,loading,updateCreateUser
     }
     return (
        <AuthContext.Provider value={allvalue}>
